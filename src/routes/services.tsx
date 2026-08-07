@@ -1,0 +1,106 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Ship, Plane, Truck, Warehouse, FileCheck, PackageSearch } from "lucide-react";
+import { PageHero } from "@/components/page-hero";
+import trucksImg from "@/assets/trucks.jpg";
+
+export const Route = createFileRoute("/services")({
+  head: () => ({
+    meta: [
+      { title: "Logistics Services — Arabian Express Logistics" },
+      {
+        name: "description",
+        content:
+          "Ocean and air freight, GCC trucking, bonded warehousing, customs clearance and fulfilment from Arabian Express Logistics.",
+      },
+      { property: "og:title", content: "Logistics Services — Arabian Express Logistics" },
+      {
+        property: "og:description",
+        content: "Ocean, air, land, warehousing, customs and fulfilment under one accountable team.",
+      },
+    ],
+  }),
+  component: Services,
+});
+
+const services = [
+  {
+    icon: Ship,
+    title: "Ocean Freight",
+    copy: "Weekly FCL and consolidated LCL departures from Jebel Ali, Khalifa and Dammam with direct carrier allocations.",
+    points: ["FCL & LCL", "Reefer & flat rack", "Port-to-door"],
+  },
+  {
+    icon: Plane,
+    title: "Air Freight",
+    copy: "Priority and deferred uplift on 20+ carriers, plus charter brokerage for oversized or emergency cargo.",
+    points: ["Next-flight-out", "Charter", "Perishables"],
+  },
+  {
+    icon: Truck,
+    title: "Land Transport",
+    copy: "Owned GCC fleet running curtainside, flatbed and refrigerated trailers with cross-border documentation handled.",
+    points: ["FTL & LTL", "Cross-border", "Live tracking"],
+  },
+  {
+    icon: Warehouse,
+    title: "Warehousing",
+    copy: "Free-zone and bonded facilities with racked, bulk and temperature-controlled zones under 24/7 monitoring.",
+    points: ["Bonded storage", "Cross-dock", "Inventory portal"],
+  },
+  {
+    icon: FileCheck,
+    title: "Customs Clearance",
+    copy: "In-house brokers filing declarations, duty exemptions and certificates of origin across UAE and KSA.",
+    points: ["Import & export", "Duty advisory", "DG handling"],
+  },
+  {
+    icon: PackageSearch,
+    title: "Fulfilment",
+    copy: "Pick, pack, label and last-mile dispatch for e-commerce and retail replenishment programmes.",
+    points: ["Pick & pack", "Returns", "Last mile"],
+  },
+];
+
+function Services() {
+  return (
+    <div>
+      <PageHero
+        eyebrow="Services"
+        title="Every leg of the journey, handled in-house."
+        blurb="Six connected service lines so your cargo never changes hands into an unaccountable third party."
+        image={trucksImg}
+      />
+
+      <section className="mx-auto max-w-7xl px-5 pb-24">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((s) => (
+            <div key={s.title} className="card-lux p-8 transition-all">
+              <s.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
+              <h2 className="mt-6 text-2xl">{s.title}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {s.points.map((p) => (
+                  <span
+                    key={p}
+                    className="border border-border px-3 py-1 text-[0.65rem] tracking-[0.16em] uppercase text-gold"
+                  >
+                    {p}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hairline mt-16 flex flex-wrap items-center justify-between gap-6 pt-10">
+          <p className="max-w-md text-sm text-muted-foreground">
+            Need a blended solution — sea in, bonded storage, then regional trucking? That's our default.
+          </p>
+          <Link to="/contact" className="btn-gold">
+            Build my routing
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
