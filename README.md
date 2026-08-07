@@ -1,25 +1,28 @@
-# Emerald Gateway
+# Arabian Express Logistics
 
-create a logitic website need pages best landing page with video rendering in home we need pages home service about us , contact  in navbar also include logo in one corner 
-which dark green and golden
+A premium logistics and freight forwarding web application, providing end-to-end supply chain solutions, customs clearance, and warehousing across the Gulf region and beyond.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-## Build with Lovable
+- **Home Page**: Interactive landing page with rich media and service highlights.
+- **Services**: Detailed breakdown of Sea, Air, and Land freight services, plus warehousing and customs clearance.
+- **About Us**: Information about our mission, vision, and decade-long history since 2009.
+- **Contact**: Interactive request-a-quote and general contact form.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/14b6c13c-c0fd-4f28-b1e7-156d162979a5).
+## Tech Stack
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **Framework**: TanStack Start (React)
+- **Styling**: Tailwind CSS v4
+- **Routing & State**: TanStack Router & TanStack Query
+- **Icons**: Lucide React
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+To run the project locally, ensure you have Node.js installed, then execute:
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+The application will run locally at `http://localhost:3000`.
