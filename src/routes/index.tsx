@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Ship, Plane, Truck, Warehouse, ArrowRight } from "lucide-react";
-import heroShipImg from "@/assets/hero_ship_overhead.png";
 import shipImg from "@/assets/ship.jpg";
 import warehouseImg from "@/assets/warehouse.jpg";
 
@@ -33,17 +32,20 @@ const services = [
 function Home() {
   return (
     <div>
-      <section className="relative isolate flex min-h-[92vh] items-end overflow-hidden">
-        <img
+      <section className="relative isolate flex min-h-screen items-center overflow-hidden">
+        <video
           className="absolute inset-0 h-full w-full object-cover"
-          src={heroShipImg}
-          alt="Container cargo ship sailing overhead view"
+          src="/IMG_0102.MP4"
+          autoPlay
+          muted
+          loop
+          playsInline
         />
-        <div className="surface-veil absolute inset-0" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-20 pt-32" data-aos="fade-up" data-aos-duration="1000">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background/90 backdrop-blur-[2px]" />
+        <div className="relative ml-0 mr-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24 pb-12 pt-32" data-aos="fade-up" data-aos-duration="1000">
           <p className="eyebrow">Est. 2009 — Farwaniya, Kuwait</p>
           <h1 className="mt-5 max-w-4xl font-display text-5xl leading-[1.05] sm:text-7xl">
-            Cargo that moves like <span className="text-gold-gradient">clockwork</span>
+            Cargo that<br />moves like<br /><span className="text-gold-gradient">clockwork</span>
           </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
             Arabian Express Logistics plans, clears and delivers freight across 40 countries — one
@@ -57,11 +59,10 @@ function Home() {
               Our services
             </Link>
           </div>
-          <div className="mt-14 grid max-w-2xl grid-cols-3 gap-6">
+          <div className="mt-14 grid max-w-md grid-cols-2 gap-8">
             {[
               ["40+", "Countries served"],
               ["18k", "Shipments a year"],
-              ["99.2%", "On-time delivery"],
             ].map(([n, l]) => (
               <div key={l}>
                 <p className="font-display text-3xl text-gold">{n}</p>

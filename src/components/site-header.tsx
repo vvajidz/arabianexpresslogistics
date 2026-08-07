@@ -14,13 +14,13 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-deep/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
+    <header className="fixed inset-x-0 top-0 z-50 bg-transparent">
+      <div className="relative flex w-full items-center justify-between px-5 md:px-10 py-3">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img src={logo} alt="Arabian Express Logistics logo" className="h-10 w-auto object-contain" />
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex">
+        <nav className="hidden items-center gap-9 md:flex absolute left-1/2 transform -translate-x-1/2">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -33,10 +33,13 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+        </nav>
+
+        <div className="hidden items-center md:flex">
           <Link to="/contact" className="btn-white !py-2.5 !px-5 font-semibold">
             Get a quote
           </Link>
-        </nav>
+        </div>
 
         <button
           className="text-gold md:hidden"

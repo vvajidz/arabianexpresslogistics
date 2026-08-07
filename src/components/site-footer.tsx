@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 export function SiteFooter() {
   return (
     <footer className="bg-deep">
-      <div className="mx-auto max-w-7xl px-5 py-14">
+      <div className="ml-0 mr-auto max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24 py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center">
