@@ -7,11 +7,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-5 py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="" loading="lazy" width={36} height={36} className="h-8 w-8" />
-              <span className="font-display text-sm tracking-[0.24em] text-gold-gradient">
-                ARABIAN EXPRESS LOGISTICS
-              </span>
+            <div className="flex items-center">
+              <img src={logo} alt="Arabian Express Logistics" loading="lazy" className="h-10 w-auto object-contain" />
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Sea, air and land freight across the Gulf and beyond — moved with precision since 2009.
@@ -30,10 +27,10 @@ export function SiteFooter() {
 
           <div>
             <p className="eyebrow">Head office</p>
-            <div className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <p>Jebel Ali Free Zone, Dubai, UAE</p>
-              <p>+971 4 000 1180</p>
-              <p>ops@arabianexpresslogistics.com</p>
+            <div className="mt-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
+              <p>Office No. 14, Multaqa Complex, Floor M, Block No. 1, Farwaniya, Kuwait</p>
+              <p>Mob: +965 55002037 / 69391295 / 67053011</p>
+              <p>Email: arabianexprss@gmail.com</p>
             </div>
           </div>
         </div>

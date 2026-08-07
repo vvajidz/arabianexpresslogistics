@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Ship, Plane, Truck, Warehouse, FileCheck, PackageSearch } from "lucide-react";
+import { Ship, Plane, Truck, Warehouse, FileCheck, PackageSearch, Package } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import trucksImg from "@/assets/trucks.jpg";
 
@@ -26,7 +26,7 @@ const services = [
   {
     icon: Ship,
     title: "Ocean Freight",
-    copy: "Weekly FCL and consolidated LCL departures from Jebel Ali, Khalifa and Dammam with direct carrier allocations.",
+    copy: "Weekly FCL and consolidated LCL departures from Shuwaikh, Shuaiba, Jebel Ali and Dammam with direct carrier allocations.",
     points: ["FCL & LCL", "Reefer & flat rack", "Port-to-door"],
   },
   {
@@ -59,6 +59,12 @@ const services = [
     copy: "Pick, pack, label and last-mile dispatch for e-commerce and retail replenishment programmes.",
     points: ["Pick & pack", "Returns", "Last mile"],
   },
+  {
+    icon: Package,
+    title: "Door-to-Door Cargo",
+    copy: "Seamless direct delivery services from Kuwait to key international destinations, handling all pickup, clearance, and doorstep delivery.",
+    points: ["India", "Philippines", "Sri Lanka", "Nepal", "Indonesia", "Ethiopia", "GCC"],
+  },
 ];
 
 function Services() {
@@ -71,10 +77,10 @@ function Services() {
         image={trucksImg}
       />
 
-      <section className="mx-auto max-w-7xl px-5 pb-24">
+      <section className="mx-auto max-w-7xl px-5 py-24">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <div key={s.title} className="card-lux p-8 transition-all">
+          {services.map((s, idx) => (
+            <div key={s.title} className="card-lux p-8 transition-all" data-aos="fade-up" data-aos-delay={idx * 100}>
               <s.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
               <h2 className="mt-6 text-2xl">{s.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
@@ -92,11 +98,11 @@ function Services() {
           ))}
         </div>
 
-        <div className="hairline mt-16 flex flex-wrap items-center justify-between gap-6 pt-10">
+        <div className="hairline mt-16 flex flex-wrap items-center justify-between gap-6 pt-10" data-aos="fade-up">
           <p className="max-w-md text-sm text-muted-foreground">
             Need a blended solution — sea in, bonded storage, then regional trucking? That's our default.
           </p>
-          <Link to="/contact" className="btn-gold">
+          <Link to="/contact" className="btn-white">
             Build my routing
           </Link>
         </div>

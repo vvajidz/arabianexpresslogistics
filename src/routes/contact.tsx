@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Request a freight quote or reach the Arabian Express Logistics operations desk in Jebel Ali, Dubai by phone or email.",
+          "Request a freight quote or reach the Arabian Express Logistics operations desk in Farwaniya, Kuwait by phone or email.",
       },
       { property: "og:title", content: "Contact — Arabian Express Logistics" },
       {
@@ -31,14 +31,15 @@ function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Send us the lane. We'll send back a plan."
-        blurb="Our Dubai operations desk answers quote requests within one business day, seven days a week during peak season."
+        blurb="Our Kuwait operations desk answers quote requests within one business day, seven days a week during peak season."
         image={trucksImg}
       />
 
-      <section className="mx-auto max-w-7xl px-5 pb-24">
+      <section className="mx-auto max-w-7xl px-5 py-24">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <form
             className="card-lux p-8"
+            data-aos="fade-right"
             onSubmit={(e) => {
               e.preventDefault();
               setSent(true);
@@ -74,12 +75,12 @@ function Contact() {
             )}
           </form>
 
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-left">
             {[
-              { icon: MapPin, t: "Head office", v: "Warehouse 14, Jebel Ali Free Zone South, Dubai, UAE" },
-              { icon: Phone, t: "Operations desk", v: "+971 4 000 1180" },
-              { icon: Mail, t: "Email", v: "ops@arabianexpresslogistics.com" },
-              { icon: Clock, t: "Hours", v: "Sun–Thu 08:00–18:00 GST · On-call weekends" },
+              { icon: MapPin, t: "Head office", v: "Office No. 14, Multaqa Complex, Floor M, Block No. 1, Farwaniya, Kuwait" },
+              { icon: Phone, t: "Operations desk", v: "+965 55002037 / 69391295 / 67053011" },
+              { icon: Mail, t: "Email", v: "arabianexprss@gmail.com" },
+              { icon: Clock, t: "Hours", v: "Sun–Thu 08:00–18:00 AST · On-call weekends" },
             ].map((c) => (
               <div key={c.t} className="hairline flex gap-4 pt-6">
                 <c.icon className="mt-1 h-5 w-5 shrink-0 text-gold" strokeWidth={1.4} />

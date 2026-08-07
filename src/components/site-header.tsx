@@ -16,12 +16,8 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-deep/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Arabian Express Logistics logo" width={40} height={40} className="h-9 w-9" />
-          <span className="leading-none">
-            <span className="block font-display text-sm tracking-[0.24em] text-gold-gradient">ARABIAN EXPRESS</span>
-            <span className="block text-[0.6rem] tracking-[0.36em] text-muted-foreground">LOGISTICS</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img src={logo} alt="Arabian Express Logistics logo" className="h-10 w-auto object-contain" />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -37,7 +33,7 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact" className="btn-gold !py-2.5 !px-5">
+          <Link to="/contact" className="btn-white !py-2.5 !px-5 font-semibold">
             Get a quote
           </Link>
         </nav>
