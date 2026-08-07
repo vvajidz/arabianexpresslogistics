@@ -38,7 +38,7 @@ function Contact() {
       <section className="mx-auto max-w-7xl px-5 py-24">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <form
-            className="card-lux p-8"
+            className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8"
             data-aos="fade-right"
             onSubmit={(e) => {
               e.preventDefault();
@@ -65,7 +65,7 @@ function Contact() {
                 className="mt-2 w-full border border-input bg-secondary/50 px-3 py-2 text-sm outline-none focus:border-gold"
               />
             </label>
-            <button type="submit" className="btn-gold mt-7">
+            <button type="submit" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-gradient-to-r from-gold via-gold-soft to-gold text-primary-foreground font-semibold transition-all hover:brightness-108 mt-7">
               {sent ? "Request received" : "Send request"}
             </button>
             {sent && (
@@ -82,7 +82,7 @@ function Contact() {
               { icon: Mail, t: "Email", v: "arabianexprss@gmail.com" },
               { icon: Clock, t: "Hours", v: "Sun–Thu 08:00–18:00 AST · On-call weekends" },
             ].map((c) => (
-              <div key={c.t} className="hairline flex gap-4 pt-6">
+              <div key={c.t} className="border-t border-gold/22 flex gap-4 pt-6">
                 <c.icon className="mt-1 h-5 w-5 shrink-0 text-gold" strokeWidth={1.4} />
                 <div>
                   <p className="text-xs tracking-[0.2em] uppercase text-gold">{c.t}</p>

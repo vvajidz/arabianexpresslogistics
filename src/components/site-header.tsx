@@ -20,7 +20,7 @@ export function SiteHeader() {
           <img src={logo} alt="Arabian Express Logistics logo" className="h-10 w-auto object-contain" />
         </Link>
 
-        <nav className="hidden items-center gap-9 md:flex absolute left-1/2 transform -translate-x-1/2">
+        <nav className="hidden items-center gap-9 md:flex absolute left-1/2 transform -translate-x-1/2 bg-deep/80 backdrop-blur-md border border-gold/15 px-8 py-2.5 rounded-full">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -36,7 +36,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center md:flex">
-          <Link to="/contact" className="btn-white !py-2.5 !px-5 font-semibold">
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
             Get a quote
           </Link>
         </div>

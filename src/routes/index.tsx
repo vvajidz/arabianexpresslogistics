@@ -32,60 +32,88 @@ const services = [
 function Home() {
   return (
     <div>
-      <section className="relative isolate flex min-h-screen items-center overflow-hidden">
+      <section className="relative isolate flex min-h-screen items-center py-20 lg:py-0 overflow-y-auto lg:overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/IMG_0102.MP4"
+          src="/0808(1).mov"
           autoPlay
           muted
           loop
           playsInline
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background/90 backdrop-blur-[2px]" />
         <div className="relative ml-0 mr-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24 pb-12 pt-32" data-aos="fade-up" data-aos-duration="1000">
-          <p className="eyebrow">Est. 2009 — Farwaniya, Kuwait</p>
-          <h1 className="mt-5 max-w-4xl font-display text-5xl leading-[1.05] sm:text-7xl">
-            Cargo that<br />moves like<br /><span className="text-gold-gradient">clockwork</span>
-          </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
-            Arabian Express Logistics plans, clears and delivers freight across 40 countries — one
-            accountable team from booking to final mile.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-4">
-            <Link to="/contact" className="btn-white">
-              Request a quote <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/services" className="btn-outline-gold">
-              Our services
-            </Link>
-          </div>
-          <div className="mt-14 grid max-w-md grid-cols-2 gap-8">
-            {[
-              ["40+", "Countries served"],
-              ["18k", "Shipments a year"],
-            ].map(([n, l]) => (
-              <div key={l}>
-                <p className="font-display text-3xl text-gold">{n}</p>
-                <p className="mt-1 text-xs tracking-[0.18em] uppercase text-muted-foreground">{l}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+            {/* Column 1: Heading (1) */}
+            <div className="space-y-5 lg:pt-80">
+              <p className="text-[0.7rem] tracking-[0.32em] uppercase text-deep font-semibold">Est. 2009 — Farwaniya, Kuwait</p>
+              <h1 className="font-display text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl text-deep">
+                <span className="whitespace-nowrap">Cargo that</span><br />
+                <span className="whitespace-nowrap">moves like</span><br />
+                <span className="whitespace-nowrap">clockwork</span>
+              </h1>
+            </div>
+
+            {/* Columns 2 & 3 (Right Span) */}
+            <div className="lg:col-span-2 flex flex-col gap-8 lg:gap-12 pt-8 lg:pt-92 lg:pl-56">
+              {/* Paragraph Text (2) */}
+              <div className="max-w-xl">
+                <p className="text-base leading-relaxed text-deep font-medium">
+                  Arabian Express Logistics plans, clears and delivers freight across 40 countries — one
+                  accountable team from booking to final mile.
+                </p>
               </div>
-            ))}
+
+              {/* Bottom row: Column 2 (Buttons - 3) and Column 3 (Stats - 4) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+                {/* Buttons (3) */}
+                <div className="flex flex-wrap gap-4">
+                  <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
+                    Request a quote <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link to="/services" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase border border-deep text-deep font-semibold transition-all hover:bg-deep/10">
+                    Our services
+                  </Link>
+                </div>
+
+                {/* Stats (4) */}
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  {[
+                    ["40+", "Countries served"],
+                    ["18k", "Shipments a year"],
+                  ].map(([n, l]) => (
+                    <div key={l}>
+                      <p className="font-display text-2xl sm:text-3xl text-deep font-bold">{n}</p>
+                      <p className="mt-1 text-xs tracking-[0.18em] uppercase text-deep/80 font-semibold">{l}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-24">
-        <p className="eyebrow" data-aos="fade-up">What we move</p>
-        <h2 className="mt-4 max-w-2xl text-3xl sm:text-4xl" data-aos="fade-up" data-aos-delay="100">
-          Four disciplines, one continuous chain of custody.
-        </h2>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map((s, idx) => (
-            <div key={s.title} className="card-lux p-7 transition-all" data-aos="fade-up" data-aos-delay={200 + idx * 100}>
-              <s.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
-              <h3 className="mt-6 text-xl">{s.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
-            </div>
-          ))}
+      <section className="relative isolate overflow-hidden py-24">
+        <img
+          src="/second cover.jpg.jpeg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover opacity-65"
+        />
+        
+        <div className="relative ml-0 mr-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24">
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold" data-aos="fade-up">What we move</p>
+          <h2 className="mt-4 max-w-none text-3xl sm:text-4xl" data-aos="fade-up" data-aos-delay="100">
+            Four disciplines, one continuous chain of custody.
+          </h2>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-3xl mr-auto">
+            {services.map((s, idx) => (
+              <div key={s.title} className="bg-card/75 border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 transition-all" data-aos="fade-up" data-aos-delay={200 + idx * 100}>
+                <s.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
+                <h3 className="mt-6 text-xl">{s.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -93,7 +121,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5" data-aos="fade-right">
-              <p className="eyebrow">Door-to-Door Cargo</p>
+              <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">Door-to-Door Cargo</p>
               <h2 className="mt-4 text-3xl sm:text-4xl">We also accept cargo door-to-door.</h2>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 Enjoy seamless, secure, and hassle-free transit for your packages. We collect from your doorstep in Kuwait and deliver directly to recipients in major international destinations, managing all customs clearance and logistics.
@@ -113,7 +141,7 @@ function Home() {
               </div>
             </div>
             <div className="lg:col-span-7" data-aos="fade-left">
-              <div className="card-lux p-8">
+              <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8">
                 <h3 className="text-xl text-gold font-display font-light tracking-wide">Accepting Cargo To:</h3>
                 <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
                   {[
@@ -149,7 +177,7 @@ function Home() {
             data-aos="fade-right"
           />
           <div data-aos="fade-left">
-            <p className="eyebrow">The difference</p>
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">The difference</p>
             <h2 className="mt-4 text-3xl sm:text-4xl">Freight desks that answer, not ticket queues.</h2>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
               Every account gets a named coordinator in Kuwait who owns the shipment end to end —
@@ -161,7 +189,7 @@ function Home() {
                 "Live milestone tracking with proactive exception alerts",
                 "Dangerous goods, reefer and project cargo certified",
               ].map((t) => (
-                <li key={t} className="hairline flex gap-3 pt-4 text-muted-foreground">
+                <li key={t} className="border-t border-gold/22 flex gap-3 pt-4 text-muted-foreground">
                   <span className="text-gold">—</span>
                   {t}
                 </li>
@@ -173,7 +201,7 @@ function Home() {
 
       <section className="relative isolate overflow-hidden py-28">
         <img src={warehouseImg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-25" />
-        <div className="surface-veil absolute inset-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-deep/55 to-deep/92" />
         <div className="relative mx-auto max-w-3xl px-5 text-center" data-aos="zoom-in">
           <h2 className="text-3xl sm:text-5xl">Tell us where it needs to be.</h2>
           <p className="mx-auto mt-5 max-w-lg text-sm leading-relaxed text-muted-foreground">
@@ -181,7 +209,7 @@ function Home() {
             business day.
           </p>
           <div className="mt-9 flex justify-center">
-            <Link to="/contact" className="btn-white">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
               Start a shipment <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

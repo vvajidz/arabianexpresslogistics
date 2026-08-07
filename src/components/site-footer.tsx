@@ -16,7 +16,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow">Navigate</p>
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">Navigate</p>
             <div className="mt-4 flex flex-col gap-2 text-sm text-muted-foreground">
               <Link to="/" className="hover:text-gold">Home</Link>
               <Link to="/services" className="hover:text-gold">Services</Link>
@@ -26,7 +26,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow">Head office</p>
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">Head office</p>
             <div className="mt-4 space-y-2 text-sm text-muted-foreground leading-relaxed">
               <p>Office No. 14, Multaqa Complex, Floor M, Block No. 1, Farwaniya, Kuwait</p>
               <p>Mob: +965 55002037 / 69391295 / 67053011</p>
@@ -35,7 +35,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="hairline mt-12 pt-6 text-xs tracking-[0.18em] uppercase text-muted-foreground">
+        <div className="border-t border-gold/22 mt-12 pt-6 text-xs tracking-[0.18em] uppercase text-muted-foreground">
           © {new Date().getFullYear()} Arabian Express Logistics
         </div>
       </div>

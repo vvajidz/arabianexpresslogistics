@@ -92,7 +92,7 @@ function About() {
         {/* Profile Grid */}
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div data-aos="fade-right">
-            <p className="eyebrow">Our Profile</p>
+            <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">Our Profile</p>
             <h2 className="mt-4 text-3xl sm:text-4xl font-display font-light">Kuwait's Trusted Cargo Partner</h2>
             <div className="mt-6 space-y-5 text-sm leading-relaxed text-muted-foreground">
               <p>
@@ -119,7 +119,7 @@ function About() {
 
         {/* Vision & Mission Grid */}
         <div className="mt-24 grid gap-8 md:grid-cols-2">
-          <div className="card-lux p-8 flex flex-col justify-between" data-aos="fade-right">
+          <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 flex flex-col justify-between" data-aos="fade-right">
             <div>
               <div className="h-10 w-10 flex items-center justify-center rounded-sm bg-gold/10 text-gold">
                 <Eye className="h-5 w-5" />
@@ -131,7 +131,7 @@ function About() {
             </div>
           </div>
 
-          <div className="card-lux p-8 flex flex-col justify-between" data-aos="fade-left">
+          <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 flex flex-col justify-between" data-aos="fade-left">
             <div>
               <div className="h-10 w-10 flex items-center justify-center rounded-sm bg-gold/10 text-gold">
                 <Target className="h-5 w-5" />
@@ -146,11 +146,11 @@ function About() {
 
         {/* Core Values Grid */}
         <div className="mt-28">
-          <p className="eyebrow text-center" data-aos="fade-up">Core Values</p>
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center" data-aos="fade-up">Core Values</p>
           <h2 className="mt-4 text-3xl sm:text-4xl text-center font-display font-light" data-aos="fade-up" data-aos-delay="100">The Pillars of Our Excellence</h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v, idx) => (
-              <div key={v.title} className="card-lux p-6" data-aos="fade-up" data-aos-delay={200 + idx * 100}>
+              <div key={v.title} className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-6" data-aos="fade-up" data-aos-delay={200 + idx * 100}>
                 <v.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
                 <h4 className="mt-5 text-lg font-semibold tracking-wide">{v.title}</h4>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{v.desc}</p>
@@ -161,10 +161,10 @@ function About() {
 
         {/* Leadership Section */}
         <div className="mt-28">
-          <p className="eyebrow text-center" data-aos="fade-up">Our Leadership</p>
+          <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center" data-aos="fade-up">Our Leadership</p>
           <h2 className="mt-4 text-3xl sm:text-4xl text-center font-display font-light" data-aos="fade-up" data-aos-delay="100">Meet Our Founder</h2>
           <div className="mt-12 flex justify-center">
-            <div className="card-lux max-w-sm p-8 text-center" data-aos="zoom-in">
+            <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] max-w-sm p-8 text-center" data-aos="zoom-in">
               <div className="mx-auto h-48 w-48 rounded-full border border-border/40 bg-secondary/20 flex items-center justify-center text-gold">
                 <User className="h-20 w-20" strokeWidth={1} />
               </div>
@@ -178,11 +178,11 @@ function About() {
         </div>
 
         {/* Contact Call to Action */}
-        <div className="hairline mt-24 pt-10 flex flex-wrap items-center justify-between gap-6" data-aos="fade-up">
+        <div className="border-t border-gold/22 mt-24 pt-10 flex flex-wrap items-center justify-between gap-6" data-aos="fade-up">
           <p className="max-w-md text-sm text-muted-foreground">
             Connect your cargo to our global shipping networks directly from Kuwait.
           </p>
-          <Link to="/contact" className="btn-white">
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
             Talk to our team
           </Link>
         </div>

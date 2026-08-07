@@ -80,7 +80,7 @@ function Services() {
       <section className="mx-auto max-w-7xl px-5 py-24">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, idx) => (
-            <div key={s.title} className="card-lux p-8 transition-all" data-aos="fade-up" data-aos-delay={idx * 100}>
+            <div key={s.title} className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8" data-aos="fade-up" data-aos-delay={idx * 100}>
               <s.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
               <h2 className="mt-6 text-2xl">{s.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
@@ -98,11 +98,11 @@ function Services() {
           ))}
         </div>
 
-        <div className="hairline mt-16 flex flex-wrap items-center justify-between gap-6 pt-10" data-aos="fade-up">
+        <div className="border-t border-gold/22 mt-16 flex flex-wrap items-center justify-between gap-6 pt-10" data-aos="fade-up">
           <p className="max-w-md text-sm text-muted-foreground">
             Need a blended solution — sea in, bonded storage, then regional trucking? That's our default.
           </p>
-          <Link to="/contact" className="btn-white">
+          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
             Build my routing
           </Link>
         </div>
