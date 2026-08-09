@@ -42,7 +42,7 @@ function Home() {
           loop
           playsInline
         />
-        <div className="relative mx-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24 py-28 mt-[5cm]" data-aos="fade-up" data-aos-duration="1000">
+        <div className="relative mx-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24 py-28 lg:mt-[5cm]" data-aos="fade-up" data-aos-duration="1000">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(24rem,35%)_minmax(32rem,45%)_minmax(20rem,24%)] gap-8 lg:gap-12 items-start">
             {/* Column 1: Large logo image */}
             <div className="flex justify-center lg:justify-start relative lg:-left-[4cm] lg:top-[5cm]">
@@ -73,7 +73,7 @@ function Home() {
             </div>
 
             {/* Column 3: Buttons and stats */}
-            <div className="flex flex-col justify-start gap-8 relative top-[5cm]">
+            <div className="flex flex-col justify-start gap-8 relative lg:top-[5cm]">
               <div className="flex flex-wrap justify-center lg:justify-end gap-4">
                 <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
                   Request a quote <ArrowRight className="h-4 w-4" />
@@ -105,7 +105,7 @@ function Home() {
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-100"
         />
-        <div className="relative left-[-3cm] mx-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24">
+        <div className="relative mx-auto w-full max-w-[85rem] px-5 sm:px-10 md:px-16 lg:px-24 lg:left-[-3cm]">
           <p className="text-[0.7rem] tracking-[0.32em] uppercase text-emerald-900" data-aos="fade-up">What we move</p>
           <h2 className="mt-4 max-w-none text-3xl sm:text-4xl text-emerald-900" data-aos="fade-up" data-aos-delay="100">
             Four disciplines, one continuous chain of custody.
