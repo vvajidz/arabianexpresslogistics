@@ -176,7 +176,12 @@ function Home() {
               <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">
                 Door-to-Door Cargo
               </p>
-              <h2 className="mt-4 text-3xl sm:text-4xl">We also accept cargo door-to-door.</h2>
+              <h2 className="mt-4 text-3xl sm:text-4xl">
+                Moving Beyond Boundaries.
+                <span className="block mt-2 text-xl sm:text-2xl text-gold font-normal">
+                  Your Trusted Cargo & Logistics Partner.
+                </span>
+              </h2>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
                 Enjoy seamless, secure, and hassle-free transit for your packages. We collect from
                 your doorstep in Kuwait and deliver directly to recipients in major international
