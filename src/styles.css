@@ -42,9 +42,9 @@
   --background: oklch(0.18 0.035 158);
   --foreground: oklch(1 0 0);
   --deep: oklch(0.12 0.025 158);
-  --card: oklch(0.20 0.03 158);
+  --card: oklch(0.2 0.03 158);
   --card-foreground: oklch(1 0 0);
-  --popover: oklch(0.20 0.03 158);
+  --popover: oklch(0.2 0.03 158);
   --popover-foreground: oklch(1 0 0);
   --primary: oklch(0.88 0.034 85);
   --primary-foreground: oklch(0.12 0.025 158);
@@ -93,5 +93,3 @@
     letter-spacing: -0.02em;
   }
 }
-
-

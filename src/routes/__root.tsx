@@ -13,7 +13,6 @@ import appCss from "../styles.css?url";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -79,13 +78,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Arabian Express Logistics" },
       {
         name: "description",
-        content: "Freight forwarding, warehousing and customs clearance across the Gulf and beyond.",
+        content:
+          "Freight forwarding, warehousing and customs clearance across the Gulf and beyond.",
       },
       { name: "author", content: "Arabian Express Logistics" },
       { property: "og:title", content: "Arabian Express Logistics" },
       {
         property: "og:description",
-        content: "Freight forwarding, warehousing and customs clearance across the Gulf and beyond.",
+        content:
+          "Freight forwarding, warehousing and customs clearance across the Gulf and beyond.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -149,4 +150,3 @@ function RootComponent() {
     </QueryClientProvider>
   );
 }
-

@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import trucksImg from "@/assets/trucks.jpg";
 
@@ -16,7 +16,8 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact — Arabian Express Logistics" },
       {
         property: "og:description",
-        content: "Send your lane, weight and deadline — we reply with a costed routing plan in one business day.",
+        content:
+          "Send your lane, weight and deadline — we reply with a costed routing plan in one business day.",
       },
     ],
   }),
@@ -65,7 +66,10 @@ function Contact() {
                 className="mt-2 w-full border border-input bg-secondary/50 px-3 py-2 text-sm outline-none focus:border-gold"
               />
             </label>
-            <button type="submit" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-gradient-to-r from-gold via-gold-soft to-gold text-primary-foreground font-semibold transition-all hover:brightness-108 mt-7">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-gradient-to-r from-gold via-gold-soft to-gold text-primary-foreground font-semibold transition-all hover:brightness-108 mt-7"
+            >
               {sent ? "Request received" : "Send request"}
             </button>
             {sent && (
@@ -77,16 +81,34 @@ function Contact() {
 
           <div className="space-y-8" data-aos="fade-left">
             {[
-              { icon: MapPin, t: "Head office", v: "Office No. 14, Multaqa Complex, Floor M, Block No. 1, Farwaniya, Kuwait" },
+              {
+                icon: MapPin,
+                t: "Head office",
+                v: "Office No. 14, Multaqa Complex, Floor M, Block No. 1, Farwaniya, Kuwait",
+              },
               { icon: Phone, t: "Operations desk", v: "+965 55002037 / 69391295 / 67053011" },
               { icon: Mail, t: "Email", v: "arabianexprss@gmail.com" },
               { icon: Clock, t: "Hours", v: "Sun–Thu 08:00–18:00 AST · On-call weekends" },
+              {
+                icon: Instagram,
+                t: "Instagram",
+                v: (
+                  <a
+                    href="https://www.instagram.com/arabian__express_kwt?igsh=MWNyMXRnejhpcGV0OQ==&igsi=MWNyMXRnejhpcGV0OQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gold transition-colors underline decoration-gold/30 underline-offset-4"
+                  >
+                    @arabian__express_kwt
+                  </a>
+                ),
+              },
             ].map((c) => (
               <div key={c.t} className="border-t border-gold/22 flex gap-4 pt-6">
                 <c.icon className="mt-1 h-5 w-5 shrink-0 text-gold" strokeWidth={1.4} />
                 <div>
                   <p className="text-xs tracking-[0.2em] uppercase text-gold">{c.t}</p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.v}</p>
+                  <div className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.v}</div>
                 </div>
               </div>
             ))}
@@ -100,7 +122,9 @@ function Contact() {
 function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
   return (
     <label className="block">
-      <span className="text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground">{label}</span>
+      <span className="text-[0.65rem] tracking-[0.2em] uppercase text-muted-foreground">
+        {label}
+      </span>
       <input
         name={name}
         type={type}

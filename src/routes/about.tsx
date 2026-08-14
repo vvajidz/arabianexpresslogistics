@@ -1,16 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { 
-  Eye, 
-  Target, 
-  CheckCircle2, 
-  Users, 
-  ShieldCheck, 
-  Lock, 
-  Zap, 
-  Handshake, 
-  Lightbulb, 
+import {
+  Eye,
+  Target,
+  CheckCircle2,
+  Users,
+  ShieldCheck,
+  Lock,
+  Zap,
+  Handshake,
+  Lightbulb,
   Globe,
-  User
+  User,
 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import warehouseImg from "@/assets/warehouse.jpg";
@@ -25,10 +25,14 @@ export const Route = createFileRoute("/about")({
         content:
           "Arabian Express International Cargo & Logistics Co. is a Kuwait-based logistics and cargo company located in Farwaniya. We specialize in Air Cargo, Sea Cargo, Door-to-Door Delivery, and Courier Services.",
       },
-      { property: "og:title", content: "About Us — Arabian Express International Cargo & Logistics Co." },
+      {
+        property: "og:title",
+        content: "About Us — Arabian Express International Cargo & Logistics Co.",
+      },
       {
         property: "og:description",
-        content: "Reliable, secure, and cost-effective international cargo and freight forwarding services for individuals and businesses.",
+        content:
+          "Reliable, secure, and cost-effective international cargo and freight forwarding services for individuals and businesses.",
       },
     ],
   }),
@@ -93,16 +97,26 @@ function About() {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div data-aos="fade-right">
             <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold">Our Profile</p>
-            <h2 className="mt-4 text-3xl sm:text-4xl font-display font-light">Kuwait's Trusted Cargo Partner</h2>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-display font-light">
+              Kuwait's Trusted Cargo Partner
+            </h2>
             <div className="mt-6 space-y-5 text-sm leading-relaxed text-muted-foreground">
               <p>
-                Arabian Express International Cargo & Logistics Co. is a Kuwait-based logistics and cargo company located in Farwaniya, Block 1. We specialize in providing reliable, secure, and cost-effective international cargo and freight forwarding services for individuals and businesses.
+                Arabian Express International Cargo & Logistics Co. is a Kuwait-based logistics and
+                cargo company located in Farwaniya, Block 1. We specialize in providing reliable,
+                secure, and cost-effective international cargo and freight forwarding services for
+                individuals and businesses.
               </p>
               <p>
-                With a commitment to excellence, we offer comprehensive shipping solutions including Air Cargo, Sea Cargo, Door-to-Door Delivery, Port-to-Port Services, Courier Services, Customs Support, and International Logistics. Our experienced team ensures every shipment is handled with care, delivered on time, and reaches its destination safely.
+                With a commitment to excellence, we offer comprehensive shipping solutions including
+                Air Cargo, Sea Cargo, Door-to-Door Delivery, Port-to-Port Services, Courier
+                Services, Customs Support, and International Logistics. Our experienced team ensures
+                every shipment is handled with care, delivered on time, and reaches its destination
+                safely.
               </p>
               <p>
-                At Arabian Express, customer satisfaction, transparency, and reliability are at the heart of everything we do.
+                At Arabian Express, customer satisfaction, transparency, and reliability are at the
+                heart of everything we do.
               </p>
             </div>
           </div>
@@ -119,26 +133,37 @@ function About() {
 
         {/* Vision & Mission Grid */}
         <div className="mt-24 grid gap-8 md:grid-cols-2">
-          <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 flex flex-col justify-between" data-aos="fade-right">
+          <div
+            className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 flex flex-col justify-between"
+            data-aos="fade-right"
+          >
             <div>
               <div className="h-10 w-10 flex items-center justify-center rounded-sm bg-gold/10 text-gold">
                 <Eye className="h-5 w-5" />
               </div>
               <h3 className="mt-6 font-display text-2xl tracking-wide text-gold">Vision</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                To become one of the most trusted and preferred international logistics and cargo service providers in Kuwait and beyond by delivering innovative, efficient, and dependable shipping solutions.
+                To become one of the most trusted and preferred international logistics and cargo
+                service providers in Kuwait and beyond by delivering innovative, efficient, and
+                dependable shipping solutions.
               </p>
             </div>
           </div>
 
-          <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 flex flex-col justify-between" data-aos="fade-left">
+          <div
+            className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 flex flex-col justify-between"
+            data-aos="fade-left"
+          >
             <div>
               <div className="h-10 w-10 flex items-center justify-center rounded-sm bg-gold/10 text-gold">
                 <Target className="h-5 w-5" />
               </div>
               <h3 className="mt-6 font-display text-2xl tracking-wide text-gold">Mission</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Our mission is to provide safe, timely, and affordable logistics services that connect people and businesses worldwide. We strive to build long-term relationships with our customers through exceptional service, operational excellence, and continuous improvement.
+                Our mission is to provide safe, timely, and affordable logistics services that
+                connect people and businesses worldwide. We strive to build long-term relationships
+                with our customers through exceptional service, operational excellence, and
+                continuous improvement.
               </p>
             </div>
           </div>
@@ -146,11 +171,27 @@ function About() {
 
         {/* Core Values Grid */}
         <div className="mt-28">
-          <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center" data-aos="fade-up">Core Values</p>
-          <h2 className="mt-4 text-3xl sm:text-4xl text-center font-display font-light" data-aos="fade-up" data-aos-delay="100">The Pillars of Our Excellence</h2>
+          <p
+            className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center"
+            data-aos="fade-up"
+          >
+            Core Values
+          </p>
+          <h2
+            className="mt-4 text-3xl sm:text-4xl text-center font-display font-light"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            The Pillars of Our Excellence
+          </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v, idx) => (
-              <div key={v.title} className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-6" data-aos="fade-up" data-aos-delay={200 + idx * 100}>
+              <div
+                key={v.title}
+                className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-6"
+                data-aos="fade-up"
+                data-aos-delay={200 + idx * 100}
+              >
                 <v.icon className="h-6 w-6 text-gold" strokeWidth={1.4} />
                 <h4 className="mt-5 text-lg font-semibold tracking-wide">{v.title}</h4>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{v.desc}</p>
@@ -161,28 +202,109 @@ function About() {
 
         {/* Leadership Section */}
         <div className="mt-28">
-          <p className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center" data-aos="fade-up">Our Leadership</p>
-          <h2 className="mt-4 text-3xl sm:text-4xl text-center font-display font-light" data-aos="fade-up" data-aos-delay="100">Meet Our Founder</h2>
+          <p
+            className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center"
+            data-aos="fade-up"
+          >
+            Our Leadership
+          </p>
+          <h2
+            className="mt-4 text-3xl sm:text-4xl text-center font-display font-light"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Meet Our Founder
+          </h2>
           <div className="mt-12 flex justify-center">
-            <div className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] max-w-sm p-8 text-center" data-aos="zoom-in">
+            <div
+              className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] max-w-sm p-8 text-center"
+              data-aos="zoom-in"
+            >
               <div className="mx-auto h-48 w-48 rounded-full border border-border/40 bg-secondary/20 flex items-center justify-center text-gold">
                 <User className="h-20 w-20" strokeWidth={1} />
               </div>
-              <h3 className="mt-6 text-2xl font-display text-gold">Mr. Rashid</h3>
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-1">Founder</p>
+              <h3 className="mt-6 text-2xl font-display text-gold">Rasheed Ibrahim</h3>
+              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mt-1">
+                Founder
+              </p>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                Leading Arabian Express with a dedication to absolute reliability, global connectivity, and client satisfaction.
+                Leading Arabian Express with a dedication to absolute reliability, global
+                connectivity, and client satisfaction.
               </p>
             </div>
           </div>
         </div>
 
+        {/* Partners Section */}
+        <div className="mt-20">
+          <p
+            className="text-[0.7rem] tracking-[0.32em] uppercase text-gold text-center"
+            data-aos="fade-up"
+          >
+            Partners
+          </p>
+          <h2
+            className="mt-4 text-3xl sm:text-4xl text-center font-display font-light"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Our Partners
+          </h2>
+          <div className="mt-12 flex justify-center">
+            <div className="grid gap-6 sm:grid-cols-3 max-w-5xl w-full px-4">
+              <div
+                className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 text-center"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <div className="mx-auto h-32 w-32 rounded-full border border-border/40 bg-secondary/20 flex items-center justify-center text-gold mb-6">
+                  <User className="h-14 w-14" strokeWidth={1} />
+                </div>
+                <p className="text-xs uppercase text-muted-foreground">
+                  Supporting Marketing Partner
+                </p>
+                <h4 className="mt-3 text-lg font-display text-gold font-semibold">PT Ismayil</h4>
+              </div>
+              <div
+                className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 text-center"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <div className="mx-auto h-32 w-32 rounded-full border border-border/40 bg-secondary/20 flex items-center justify-center text-gold mb-6">
+                  <User className="h-14 w-14" strokeWidth={1} />
+                </div>
+                <p className="text-xs uppercase text-muted-foreground">Marketing Partner</p>
+                <h4 className="mt-3 text-lg font-display text-gold font-semibold">
+                  Muhammed Sayoof
+                </h4>
+              </div>
+              <div
+                className="bg-card border border-gold/18 rounded-sm transition-all hover:border-gold/50 hover:shadow-[0_18px_50px_-22px_rgba(230,222,201,0.45)] p-8 text-center"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div className="mx-auto h-32 w-32 rounded-full border border-border/40 bg-secondary/20 flex items-center justify-center text-gold mb-6">
+                  <User className="h-14 w-14" strokeWidth={1} />
+                </div>
+                <p className="text-xs uppercase text-muted-foreground">Marketing Partner</p>
+                <h4 className="mt-3 text-lg font-display text-gold font-semibold">Ambrus Hasan</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Contact Call to Action */}
-        <div className="border-t border-gold/22 mt-24 pt-10 flex flex-wrap items-center justify-between gap-6" data-aos="fade-up">
+        <div
+          className="border-t border-gold/22 mt-24 pt-10 flex flex-wrap items-center justify-between gap-6"
+          data-aos="fade-up"
+        >
           <p className="max-w-md text-sm text-muted-foreground">
             Connect your cargo to our global shipping networks directly from Kuwait.
           </p>
-          <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3 text-[0.78rem] tracking-[0.18em] uppercase bg-white text-deep font-semibold transition-all hover:opacity-90"
+          >
             Talk to our team
           </Link>
         </div>
